@@ -1,0 +1,12 @@
+<repositories encoding="unicode" version="1.1">
+  <repo priority="50" quality="experimental" status="unofficial">
+    <name>gentoo-zjp</name>
+    <description>Ebuilds I like not yet in Gentoo repos</description>
+    <homepage>https://github.com/zjp/gentoo-zjp</homepage>
+    <owner>
+      <email>zach@zjp.codes</email>
+      <name>Zach Pearson</name>
+    </owner>
+    <source type="git">https://github.com/zjp/gentoo-zjp.git</source>
+  </repo>
+</repositories>
