@@ -1,19 +1,17 @@
-# Copyright 1999-2018 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="4"
+EAPI="7"
 
-inherit versionator multilib
+inherit multilib
 
-MY_PV="$(get_version_component_range 1-3)"
-MY_PVR="$(replace_version_separator 3 -)"
 PLUGIN_VER="1.0.0-2"
 
 DESCRIPTION="Epson Perfection V550 scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
-SRC_URI="amd64? ( 
+SRC_URI="amd64? (
 https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-1.0.1.x64.rpm.tar.gz )
-        x86? ( 
+x86? (
 https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-1.0.1.x86.rpm.tar.gz )"
 LICENSE="AVASYS"
 SLOT="0"
@@ -22,7 +20,7 @@ KEYWORDS="-* ~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=media-gfx/iscan-2.21.0 app-arch/rpm2targz"
-RDEPEND="${DEPEND}"
+RDEPEND=">=media-gfx/iscan-2.21.0"
 
 S="${WORKDIR}"
 

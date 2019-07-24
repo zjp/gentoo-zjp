@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>jcate95@hotmail.com</email>
+    <name>jcate95</name>
+  </maintainer>
+  <use>
+    <flag name="network">support for wireless-tools</flag>
+    <flag name="i3wm">support for i3wm</flag>
+    <flag name="mpd">support for mpd</flag>
+  </use>
+  <longdescription>
+    polybar for system bars.
+  </longdescription>
+</pkgmetadata>

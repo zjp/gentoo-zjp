@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<!--modified from https://gitweb.gentoo.org/repo/gentoo.git/plain/gnome-extra/nemo/metadata.xml-->
+<pkgmetadata>
+	<maintainer type="person">
+		<email>jcate95@hotmail.com</email>
+		<name>jcate95</name>
+	</maintainer>
+	<use>
+		<flag name="packagekit">Use packagekit to search for programs to open unknown file types</flag>
+		<flag name="tracker">Add support for <pkg>app-misc/tracker</pkg> search</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">linuxmint/nemo</remote-id>
+	</upstream>
+</pkgmetadata>

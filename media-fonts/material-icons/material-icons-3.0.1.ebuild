@@ -1,5 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
 # Copied from szorfein/ninjatools
 # https://github.com/szorfein/ninjatools/blob/master/media-fonts/material-icons/material-icons-3.0.1.ebuild
 EAPI=6

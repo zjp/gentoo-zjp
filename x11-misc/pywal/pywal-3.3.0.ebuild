@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -15,7 +15,7 @@ if [[ ${PV} == "9999" ]] ; then
 	SRC_URI=""
 	EGIT_REPO_URI="https://github.com/dylanaraps/${PN}.git"
 else
-  SRC_URI="https://codeload.github.com/dylanaraps/pywal/tar.gz/3.3.0 -> ${PV}.tar.gz"
+SRC_URI="https://codeload.github.com/dylanaraps/pywal/tar.gz/3.3.0 -> ${PV}.tar.gz"
 fi
 
 LICENSE="GPL-3+"

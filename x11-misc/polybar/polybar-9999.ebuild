@@ -1,5 +1,6 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2019 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
+
 EAPI=6
 # Used https://gpo.zugaina.org/AJAX/Ebuild/38346907/View
 PYTHON_COMPAT=( python2_7 )
@@ -38,4 +39,3 @@ src_configure() {
 	)
 	cmake-utils_src_configure
 }
-
