@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>jcate95@hotmail.com</email>
+    <name>jcate95</name>
+  </maintainer>
+  <use>
+    <flag name="nocsd">Disables client side decorations</flag>
+  </use>
+  <longdescription>
+    Termite terminal emulator
+  </longdescription>
+</pkgmetadata>
