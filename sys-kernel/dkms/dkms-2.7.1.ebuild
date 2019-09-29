@@ -4,7 +4,7 @@
 EAPI="6"
 
 EGIT_REPO_URI="https://github.com/dell/dkms"
-EGIT_COMMIT=08dd4e13aceae4f37120aee7d8d55c8e22987740
+EGIT_COMMIT=56d9dd02fa4798510d4ab90cf0fdcbcb4aa1e0e2
 
 inherit eutils git-r3
 

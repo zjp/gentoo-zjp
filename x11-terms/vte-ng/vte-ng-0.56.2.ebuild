@@ -11,6 +11,8 @@ HOMEPAGE="https://github.com/thestinger/vte-ng"
 LICENSE="LGPL-2.1"
 SLOT="0"
 EGIT_REPO_URI="https://github.com/thestinger/vte-ng"
+EGIT_BRANCH=0.56.2-ng
+EGIT_COMMIT=dd74ae7c06e8888af2fc090ac6f8920a9d8227fb
 
 KEYWORDS="~amd64 ~x86"
 
