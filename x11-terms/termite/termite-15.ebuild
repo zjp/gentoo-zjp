@@ -3,7 +3,7 @@
 
 # From SoniFrog overlay, https://gpo.zugaina.org/AJAX/38371351/View
 EAPI=6
-
+EGIT_COMMIT=4aa842245f7abb9328bf37d48f814c7b749e8516
 inherit git-r3 eutils
 
 DESCRIPTION="A keyboard-centric VTE-based terminal"

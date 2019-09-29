@@ -2,6 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
+EGIT_COMMIT=91652736ae86140c25d1c055016f095b94f301c6
 # Used https://gpo.zugaina.org/AJAX/Ebuild/38346907/View
 PYTHON_COMPAT=( python2_7 )
 inherit git-r3 cmake-utils python-single-r1
