@@ -10,9 +10,9 @@ PLUGIN_VER="1.0.0-2"
 DESCRIPTION="Epson Perfection V550 scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-1.0.1.x64.rpm.tar.gz )
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-2.30.4.x64.rpm.tar.gz )
 x86? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-1.0.1.x86.rpm.tar.gz )"
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-2.30.4.x86.rpm.tar.gz )"
 LICENSE="AVASYS"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
