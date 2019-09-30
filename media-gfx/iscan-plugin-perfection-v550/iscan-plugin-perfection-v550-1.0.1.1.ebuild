@@ -20,8 +20,8 @@ KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
 
-DEPEND=">=media-gfx/iscan-2.21.0 app-arch/rpm2targz"
-RDEPEND=">=media-gfx/iscan-2.21.0"
+DEPEND=">=media-gfx/iscan-2.30.4 app-arch/rpm2targz"
+RDEPEND=">=media-gfx/iscan-2.30.4"
 
 S="${WORKDIR}"
 
