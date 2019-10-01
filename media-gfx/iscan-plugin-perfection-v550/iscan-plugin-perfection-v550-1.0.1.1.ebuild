@@ -32,13 +32,13 @@ src_compile() { :; }
 
 src_install() {
 	# install scanner firmware
-        if use amd64 ; then
-	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"$(ISCAN_VER)".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm
+	if use amd64 ; then
+	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm
 	    tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
-        else
+	else
 	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm
 	    tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
-        fi
+	fi
 	rm "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
 	rm -rf "${WORKDIR}"/iscan*.rpm
 	insinto /usr/share/iscan
