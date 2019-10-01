@@ -5,22 +5,23 @@ EAPI="7"
 
 inherit multilib
 
-PLUGIN_VER="1.0.0-2"
+ISCAN_VER="2.30.4"
+MY_PV=$(ver_rs 3 '-')
 
 DESCRIPTION="Epson Perfection V550 scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-1.0.1.x64.rpm.tar.gz )
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm.tar.gz )
 x86? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-1.0.1.x86.rpm.tar.gz )"
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm.tar.gz )"
 LICENSE="AVASYS"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
 
 IUSE=""
 
-DEPEND=">=media-gfx/iscan-2.21.0 app-arch/rpm2targz"
-RDEPEND=">=media-gfx/iscan-2.21.0"
+DEPEND=">=media-gfx/iscan-2.30.4 app-arch/rpm2targz"
+RDEPEND=">=media-gfx/iscan-2.30.4"
 
 S="${WORKDIR}"
 
@@ -31,8 +32,13 @@ src_compile() { :; }
 
 src_install() {
 	# install scanner firmware
-	rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${PVR}".{x64,x86}.rpm/plugins/iscan-plugin-perfection-v550-"${PLUGIN_VER}".{x86_64,i386}.rpm
-	tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
+	if use amd64 ; then
+	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm
+	    tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
+	else
+	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm
+	    tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
+	fi
 	rm "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
 	rm -rf "${WORKDIR}"/iscan*.rpm
 	insinto /usr/share/iscan

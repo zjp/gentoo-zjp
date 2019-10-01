@@ -6,6 +6,6 @@
     <name>jcate95</name>
   </maintainer>
   <longdescription>
-    nemo-share is a plugin for nemo which enables samba functionality.
+    nemo-extensions contains additional functionality for nemo.
   </longdescription>
 </pkgmetadata>
