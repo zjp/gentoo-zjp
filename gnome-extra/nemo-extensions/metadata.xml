@@ -14,7 +14,7 @@
     <flag name="preview">file previewer extension</flag>
     <flag name="python">python extension</flag>
     <flag name="terminal">integrated terminal extension</flag>
-    <flag name="imageconverter">imagemagick integration</flag>
+    <flag name="image-converter">imagemagick integration</flag>
     <flag name="dropbox">dropbox integration</flag>
   </use>
 </pkgmetadata>

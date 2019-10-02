@@ -18,7 +18,7 @@ KEYWORDS="~amd64"
 
 # Tested extensions
 #IUSE="fileroller compare dropbox foldercolor gtkhash imageconverter mediacolumns pastebin preview -python rabbitvcs repairer seahorse share terminal"
-IUSE="fileroller share dropbox imageconverter terminal python preview"
+IUSE="fileroller share dropbox image-converter terminal python preview"
 MODULES=${IUSE//-/}
 
 REQUIRED_USE="terminal? ( python )"
@@ -26,7 +26,7 @@ REQUIRED_USE="terminal? ( python )"
 DEPEND="( >=gnome-extra/nemo-4.0.0[introspection] )
 		fileroller? ( app-arch/file-roller )
 		share? ( net-fs/samba )
-		imageconverter? ( media-gfx/imagemagick )
+		image-converter? ( media-gfx/imagemagick )
 		terminal? ( x11-terms/vte-ng )
 		python? ( dev-python/pygobject:* )
 		preview? ( app-text/xreader media-libs/clutter-gst media-libs/clutter-gtk >=x11-libs/gtksourceview-3:* >=media-libs/musicbrainz-5:* )"
