@@ -23,13 +23,13 @@ MODULES=${IUSE//-/}
 
 DEPEND="( >=gnome-extra/nemo-4.0.0[introspection] )
 		fileroller? ( app-arch/file-roller )
-                share? ( net-fs/samba )"
+		share? ( net-fs/samba )"
 
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
-        cd "${S}"
+	cd "${S}"
 	mv ${PN}-${PV} ${P}
 }
 
@@ -81,7 +81,7 @@ src_install () {
 			pushd nemo-${module}
 			emake DESTDIR="${D}" install
 			elog "Removing .a and .la files"
-			find ${D} -name "*.a" -exec rm {} + -o -name "*.la" -exec rm {} + || die
+			find "${D}" -name "*.a" -exec rm {} + -o -name "*.la" -exec rm {} + || die
 			dodoc README
 			popd
 		fi

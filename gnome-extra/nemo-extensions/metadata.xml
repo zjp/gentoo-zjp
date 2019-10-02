@@ -8,4 +8,8 @@
   <longdescription>
     nemo-extensions contains additional functionality for nemo.
   </longdescription>
+  <use>
+    <flag name="share">enables extension for samba integration</flag>
+    <flag name="fileroller">enables extension for fileroller functionality</flag>
+  </use>
 </pkgmetadata>
