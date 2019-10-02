@@ -18,32 +18,26 @@ KEYWORDS="~amd64"
 
 # Tested extensions
 #IUSE="fileroller compare dropbox foldercolor gtkhash imageconverter mediacolumns pastebin preview -python rabbitvcs repairer seahorse share terminal"
-IUSE="fileroller share dropbox image-converter terminal python preview"
+IUSE="fileroller share"
 MODULES=${IUSE//-/}
 
-REQUIRED_USE="terminal? ( python )"
+#REQUIRED_USE="terminal? ( python )"
 
 DEPEND="( >=gnome-extra/nemo-4.0.0[introspection] )
 		fileroller? ( app-arch/file-roller )
-		share? ( net-fs/samba )
-		image-converter? ( media-gfx/imagemagick )
-		terminal? ( x11-terms/vte-ng )
-		python? ( dev-python/pygobject:* )
-		preview? ( app-text/xreader media-libs/clutter-gst media-libs/clutter-gtk >=x11-libs/gtksourceview-3:* >=media-libs/musicbrainz-5:* )"
+		share? ( net-fs/samba )"
 
 RDEPEND="${DEPEND}"
 
 src_unpack() {
 	unpack ${A}
 	cd "${S}"
-	mv ${PN}-${PV} ${P}
 }
 
 src_prepare () {
 	for module in ${MODULES}
 		do
-		if use ${module}
-			then
+		if use ${module}; then
 			elog "Preparing ${module}"
 			pushd nemo-${module}
 			eautoreconf
@@ -55,8 +49,7 @@ src_prepare () {
 src_configure () {
 	for module in ${MODULES}
 		do
-		if use ${module}
-			then
+		if use ${module}; then
 			elog "Configuring ${module}"
 			pushd nemo-${module}
 			econf
@@ -68,8 +61,7 @@ src_configure () {
 src_compile () {
 	for module in ${MODULES}
 		do
-		if use ${module}
-			then
+		if use ${module}; then
 			elog "Compiling ${module}"
 			pushd nemo-${module}
 			emake
@@ -81,8 +73,7 @@ src_compile () {
 src_install () {
 	for module in ${MODULES}
 		do
-		if use ${module}
-			then
+		if use ${module}; then
 			elog "Installing ${module}"
 			pushd nemo-${module}
 			emake DESTDIR="${D}" install
