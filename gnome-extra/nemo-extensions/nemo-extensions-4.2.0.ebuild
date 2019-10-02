@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-#template copied from https://gpo.zugaina.org/AJAX/Ebuild/2927437
+#template copied from https://gpo.zugaina.org/AJAX/Ebuild/2927437, luman's repo
 EAPI=5
 
 inherit autotools
@@ -18,12 +18,16 @@ KEYWORDS="~amd64"
 
 # Tested extensions
 #IUSE="fileroller compare dropbox foldercolor gtkhash imageconverter mediacolumns pastebin preview -python rabbitvcs repairer seahorse share terminal"
-IUSE="fileroller share"
+IUSE="fileroller share dropbox imageconverter terminal python preview"
 MODULES=${IUSE//-/}
 
 DEPEND="( >=gnome-extra/nemo-4.0.0[introspection] )
 		fileroller? ( app-arch/file-roller )
-		share? ( net-fs/samba )"
+		share? ( net-fs/samba )
+		imageconverter? ( media-gfx/imagemagick )
+		terminal? ( x11-terms/vte-ng gnome-extra/nemo-extensions[python] )
+		python? ( dev-python/pygobject:* )
+		preview? ( app-text/xreader media-libs/clutter-gst media-libs/clutter-gtk >=x11-libs/gtksourceview-3:* >=media-libs/musicbrainz-5:* )"
 
 RDEPEND="${DEPEND}"
 
