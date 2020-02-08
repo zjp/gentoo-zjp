@@ -15,7 +15,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="+alsa i3wm mpd curl network pulseaudio"
 DEPEND="
 x11-libs/libxcb[xkb]
-x11-libs/cairo[xcb]
+x11-libs/cairo[X]
 x11-base/xcb-proto
 x11-libs/xcb-util-wm
 x11-libs/xcb-util-image
