@@ -4,7 +4,7 @@
 EAPI="7"
 PYTHON_COMPAT=( python3_{6,7,8} )
 
-inherit meson python-single-r1
+inherit meson python-r1
 
 DESCRIPTION="Python binding for Nemo components"
 HOMEPAGE="https://github.com/linuxmint/nemo-extensions"
@@ -15,7 +15,6 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
-
 RDEPEND="${PYTHON_DEPS}"
 DEPEND="${RDEPEND}
 	dev-python/pygobject:3[${PYTHON_USEDEP}]

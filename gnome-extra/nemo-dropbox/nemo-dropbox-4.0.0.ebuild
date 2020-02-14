@@ -7,6 +7,7 @@ GNOME2_LA_PUNT="yes"
 PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2
+inherit python-r1
 
 DESCRIPTION="Dropbox integration for Nemo"
 HOMEPAGE="https://github.com/linuxmint/nemo-extensions"
@@ -16,8 +17,8 @@ S="${WORKDIR}/nemo-extensions-${PV}/${PN}"
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
-DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygobject:2 dev-python/pygtk net-misc/dropbox sys-process/procps dev-python/pygpgme sys-auth/polkit"
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
+DEPEND="${PYTHON_DEPS} >=gnome-extra/nemo-4.0.0[introspection] dev-python/pygobject:2 dev-python/pygtk net-misc/dropbox sys-process/procps dev-python/pygpgme sys-auth/polkit"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
