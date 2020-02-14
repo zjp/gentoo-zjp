@@ -16,7 +16,7 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=gnome-extra/nemo-${PV}[introspection]"
+DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygtk"
 RDEPEND="net-misc/dropbox"
 
 src_prepare() {
