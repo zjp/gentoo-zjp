@@ -4,7 +4,7 @@
 EAPI="6"
 GNOME2_EAUTORECONF="yes"
 GNOME2_LA_PUNT="yes"
-PYTHON_COMPAT=( python3_{6,7,8} )
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2
 
@@ -17,11 +17,13 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygobject:3 net-misc/dropbox sys-process/procps dev-python/pygpgme sys-auth/polkit"
+DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygobject:2 dev-python/pygtk net-misc/dropbox sys-process/procps dev-python/pygpgme sys-auth/polkit"
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Use system dropbox.
 	sed -e "s|/var/lib/dropbox|/opt/dropbox|" -e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' -i dropbox.in || die
+	grep -rl "python" "${WORKDIR}"/nemo-extensions-"${PV}"/nemo-dropbox/* | xargs sed -i 's/python/python2/g'
+	grep -rl "python22" "${WORKDIR}"/nemo-extensions-"${PV}"/nemo-dropbox/* | xargs sed -i 's/python22/python2/g'
 	gnome2_src_prepare
 }
