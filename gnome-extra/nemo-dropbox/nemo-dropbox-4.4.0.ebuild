@@ -23,6 +23,5 @@ RDEPEND="${DEPEND}"
 src_prepare() {
 	# Use system dropbox.
 	sed -e "s|/var/lib/dropbox|/opt/dropbox|" -e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' -i dropbox.in || die
-	grep -rl "PYTHON_CHECK_MODULE(pygtk, gtk)" "${WORKDIR}"/nemo-extensions-"${PV}"/nemo-dropbox/configure.ac | xargs sed -i 's/PYTHON_CHECK_MODULE(pygtk, gtk)/#PYTHON_CHECK_MODULE(pygtk, gtk)/g'
 	gnome2_src_prepare
 }
