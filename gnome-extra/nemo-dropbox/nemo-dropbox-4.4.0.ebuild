@@ -4,6 +4,7 @@
 EAPI="6"
 GNOME2_EAUTORECONF="yes"
 GNOME2_LA_PUNT="yes"
+PYTHON_COMPAT=( python2_7 )
 
 inherit gnome2
 
