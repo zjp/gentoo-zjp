@@ -1,0 +1,20 @@
+--- a/libview/ev-jobs.c	2018-06-29 19:35:20.791487512 +0200
++++ b/libview/ev-jobs.c	2018-06-29 19:35:14.725456828 +0200
+@@ -859,8 +859,6 @@
+ 	gtk_widget_destroy (gtk_widget_get_toplevel (webview));
+ }
+ 
+-#endif  /* ENABLE_EPUB */
+-
+ static void
+ web_thumbnail_get_screenshot_cb (WebKitWebView  *webview,
+                                  WebKitLoadEvent event,
+@@ -894,6 +892,8 @@
+ 	return TRUE;
+ }
+ 
++#endif  /* ENABLE_EPUB */
++
+ static gboolean
+ ev_job_thumbnail_run (EvJob *job)
+ {
