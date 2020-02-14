@@ -22,3 +22,6 @@ DEPEND="${RDEPEND}
 	>=dev-util/gtk-doc-am-1.9
 	virtual/pkgconfig
 "
+src_prepare() {
+	grep -rl "python3" "${WORKDIR}"/nemo-extensions-"${PV}"/nemo-python/* | xargs sed -i 's/python3/python/g'
+}
