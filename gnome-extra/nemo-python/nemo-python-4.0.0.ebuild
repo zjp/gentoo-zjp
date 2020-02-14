@@ -24,4 +24,5 @@ DEPEND="${RDEPEND}
 "
 src_prepare() {
 	grep -rl "python3" "${WORKDIR}"/nemo-extensions-"${PV}"/nemo-python/* | xargs sed -i 's/python3/python/g'
+	default
 }
