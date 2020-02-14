@@ -17,8 +17,8 @@ LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygtk"
-RDEPEND="net-misc/dropbox"
+DEPEND=">=gnome-extra/nemo-4.0.0[introspection] dev-python/pygtk net-misc/dropbox sys-process/procps dev-python/pygpgme sys-auth/polkit"
+RDEPEND="${DEPEND}"
 
 src_prepare() {
 	# Use system dropbox.
