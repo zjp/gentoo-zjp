@@ -22,8 +22,7 @@ RDEPEND="net-misc/dropbox"
 
 src_prepare() {
 	# Use system dropbox.
-	sed -e "s|/var/lib/dropbox|/opt/dropbox|" \
-		-e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' \
-		-i dropbox.in || die
+	sed -e "s|/var/lib/dropbox|/opt/dropbox|" -e 's|\(DROPBOXD_PATH = \).*|\1"/opt/dropbox/dropboxd"|' -i dropbox.in || die
+	grep -rl python "${WORKDIR}"/* | xargs sed -i 's/python/python2/g'
 	gnome2_src_prepare
 }
