@@ -7,7 +7,7 @@ inherit eutils java-pkg-2 java-ant-2 versionator
 MY_PV=$(replace_all_version_separators _)
 DESCRIPTION="An open source clone of the popular Axis and Allies boardgame"
 HOMEPAGE="http://triplea.sourceforge.net/"
-SRC_URI="https://api.github.com/repos/triplea-game/triplea/zipball/1.9.0.0.13066"
+SRC_URI="https://github.com/triplea-game/triplea/archive/release/1.9.0.0.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
