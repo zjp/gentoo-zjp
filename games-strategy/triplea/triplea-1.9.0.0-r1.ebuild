@@ -35,6 +35,8 @@ java_prepare() {
 	# Use ~/.triplea, not ~/triplea.
 	# Don't write server files under /usr/share or ${PWD}.
 	epatch "${FILESDIR}"/pathsnew.patch
+	cp "${FILESDIR}"/build.xml build.xml
+	cp "${FILESDIR}"/.ant.properties .ant.properties
 
 	# Remove packaged or unneeded libs. Unfortunately Apache Derby was
 	# last-rited due to packaging issues. See bug #561410.
