@@ -18,8 +18,7 @@ RESTRICT="test" # Needs X11 maybe use virtualx.eclass
 RDEPEND="dev-java/apple-java-extensions-bin:0
 	dev-java/commons-httpclient:3
 	dev-java/oracle-javamail:0
-	dev-java/osgi-core-api:0
-	dev-java/upnplib:0"
+	dev-java/osgi-core-api:0"
 DEPEND="${RDEPEND}
 	>=virtual/jdk-1.7
 	app-arch/unzip
@@ -36,7 +35,7 @@ java_prepare() {
 	# Use ~/.triplea, not ~/triplea.
 	# Don't write server files under /usr/share or ${PWD}.
 	# Fix to build against our packaged upnplib.
-	epatch "${FILESDIR}"/{paths,upnplib}.patch
+	epatch "${FILESDIR}"/pathsnew.patch
 
 	# Remove packaged or unneeded libs. Unfortunately Apache Derby was
 	# last-rited due to packaging issues. See bug #561410.
