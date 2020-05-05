@@ -29,12 +29,11 @@ RDEPEND="${RDEPEND}
 S=${WORKDIR}/${PN}-release-1.9.0.0
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
-EANT_GENTOO_CLASSPATH="apple-java-extensions-bin,commons-httpclient-3,oracle-javamail,osgi-core-api,upnplib"
+EANT_GENTOO_CLASSPATH="apple-java-extensions-bin,commons-httpclient-3,oracle-javamail,osgi-core-api"
 
 java_prepare() {
 	# Use ~/.triplea, not ~/triplea.
 	# Don't write server files under /usr/share or ${PWD}.
-	# Fix to build against our packaged upnplib.
 	epatch "${FILESDIR}"/pathsnew.patch
 
 	# Remove packaged or unneeded libs. Unfortunately Apache Derby was
@@ -59,7 +58,7 @@ src_install() {
 	doins -r assets data dice_servers maps
 
 	java-pkg_dojar ${PN}.jar
-	java-pkg_newjar lib/derby-*.jar derby.jar
+	#java-pkg_newjar lib/derby-*.jar derby.jar
 
 	java-pkg_dolauncher ${PN} \
 		--main games.strategy.engine.framework.GameRunner \
