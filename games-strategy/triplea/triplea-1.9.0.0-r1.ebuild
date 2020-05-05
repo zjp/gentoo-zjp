@@ -39,7 +39,7 @@ java_prepare() {
 	# Remove packaged or unneeded libs. Unfortunately Apache Derby was
 	# last-rited due to packaging issues. See bug #561410.
 	#find lib/* ! -name "derby-*.jar" -delete || die
-	rm -r old/ || die
+	#rm -r old/ || die
 }
 
 src_compile() {
