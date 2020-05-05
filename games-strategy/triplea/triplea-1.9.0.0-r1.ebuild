@@ -27,7 +27,7 @@ DEPEND="${RDEPEND}
 RDEPEND="${RDEPEND}
 	>=virtual/jre-1.7"
 
-S="${WORKDIR}/${PN}-release-1.9.0.0"
+S=${WORKDIR}/${PN}-release-1.9.0.0
 
 JAVA_ANT_REWRITE_CLASSPATH="true"
 EANT_GENTOO_CLASSPATH="apple-java-extensions-bin,commons-httpclient-3,oracle-javamail,osgi-core-api,upnplib"
