@@ -21,8 +21,8 @@ S=${WORKDIR}
 
 src_install() {
 	insinto "/usr/share/${PN}"
-	doins ${WORKDIR}/*
+	doins -r ${WORKDIR}/*
 	cd /usr/bin
 	echo "#! /usr/bin/bash \n cd /usr/share/${PN}/bin \n java -jar triplea-game-headed-${PV}.jar" > triplea
-	chmod +x triplea
+	chmod 0755 triplea
 }
