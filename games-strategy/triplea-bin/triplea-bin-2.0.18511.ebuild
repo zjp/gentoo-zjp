@@ -17,6 +17,8 @@ DEPEND=">=virtual/jre-1.8
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
+S=${WORKDIR}
+
 src_install() {
 	insinto "/usr/share/${PN}"
 	doins ${WORKDIR}/*
