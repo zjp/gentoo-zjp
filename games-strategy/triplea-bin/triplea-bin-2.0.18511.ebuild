@@ -22,7 +22,7 @@ S=${WORKDIR}
 src_install() {
 	insinto "/usr/share/${PN}"
 	doins -r ${WORKDIR}/*
-	doins ${WORKDIR}}/.triplea-root
+	doins ${WORKDIR}/.triplea-root
 	echo -e "#! /bin/bash \n cd /usr/share/${PN}/bin \n java -jar triplea-game-headed-${PV}.jar" > ${WORKDIR}/triplea
 	exeinto "/usr/bin"
 	doexe ${WORKDIR}/triplea
