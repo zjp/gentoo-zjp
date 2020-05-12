@@ -5,7 +5,7 @@ EAPI=6
 
 # Requires python3_6 which is not yet stable in Gentoo
 # Be sure to add `x11-misc/pywal python_targets_python3_6` to /etc/portage/package.use/pywal
-PYTHON_COMPAT=( python{3_5,3_6} )
+PYTHON_COMPAT=( python{3_5,3_6,3_7} )
 
 inherit distutils-r1 git-r3
 
