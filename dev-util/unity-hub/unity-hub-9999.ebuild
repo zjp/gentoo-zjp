@@ -27,5 +27,9 @@ src_compile() {
 
 src_install() {
 	newbin ${WORKDIR}/UnityHub.AppImage unity-hub
-	make_desktop_entry /usr/bin/unity-hub "Unity Hub" Graphics
+	chmod +x ${WORKDIR}/UnityHub.AppImage
+	${WORKDIR}/UnityHub.AppImage --appimage-extract
+	cp ${WORKDIR}/squashfs-root/unityhub.png ${WORKDIR}
+	doicon ${WORKDIR}/unityhub.png
+	make_desktop_entry /usr/bin/unity-hub "Unity Hub" /usr/share/pixmaps/unityhub.png
 }
