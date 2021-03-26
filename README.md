@@ -1,4 +1,5 @@
 #gentoo-zjp
+## I am currently trying NixOS, so this repository will see less maintenance.
 ## Purpose
 There are generally three categories of ebuilds in this repository:
 1. Software that has not been on Gentoo's repos or Layman before
