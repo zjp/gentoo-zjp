@@ -5,10 +5,10 @@
     	<description>Ebuilds I like not yet in Gentoo repos</description>
     	<homepage></homepage>
     	<owner>
-		    <email>zach@zjp.codes</email>
-		    <name>Zach Pearson</name>
-	    </owner>
-	    <source type="git">https://github.com/zjp/gentoo-zjp.git</source>
-      <feed>https://github.com/zjp/gentoo-zjp/commits/master.atom</feed>
+		<email>zach@zjp.codes</email>
+		<name>Zach Pearson</name>
+	</owner>
+	<source type="git">https://github.com/zjp/gentoo-zjp.git</source>
+      	<feed>https://github.com/zjp/gentoo-zjp/commits/master.atom</feed>
     </repo>
   </repositories>
