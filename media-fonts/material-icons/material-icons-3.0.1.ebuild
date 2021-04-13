@@ -3,7 +3,7 @@
 
 # Copied from szorfein/ninjatools
 # https://github.com/szorfein/ninjatools/blob/master/media-fonts/material-icons/material-icons-3.0.1.ebuild
-EAPI=6
+EAPI=7
 MATERIAL="material-design-icons"
 
 inherit font
