@@ -34,10 +34,10 @@ src_install() {
 	# install scanner firmware
 	if use amd64 ; then
 	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm
-	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550-*.cpio
+	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550.cpio
 	else
 	    rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm
-	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550-*.cpio
+	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550.cpio
 	fi
 	rm "${WORKDIR}"/iscan-plugin-perfection-v550-*.cpio
 	rm -rf "${WORKDIR}"/iscan*.rpm
