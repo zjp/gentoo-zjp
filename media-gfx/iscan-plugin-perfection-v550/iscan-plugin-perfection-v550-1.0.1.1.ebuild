@@ -33,12 +33,16 @@ src_compile() { :; }
 src_install() {
 	# install scanner firmware
 	if use amd64 ; then
-	    cpio -iv < "${WORKDIR}"/iscan-perfection-v550-bundle-"${EPS_VER}".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm/iscan-plugin-perfection-v550.cpio
+            rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm
+	    tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
+	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550-"${MY_PV}".x86_64.rpm/iscan-plugin-perfection-v550.cpio
 	else
-	    cpio -iv < "${WORKDIR}"/iscan-perfection-v550-bundle-"${EPS_VER}".x86.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm/iscan-plugin-perfection-v550.cpio
+            rpm2targz "${WORKDIR}"/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm/plugins/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm
+            tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
+	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm/iscan-plugin-perfection-v550.cpio
 	fi
-	rm "${WORKDIR}"/iscan-plugin-perfection-v550-*.cpio
-	rm -rf "${WORKDIR}"/iscan*.rpm
+	#rm "${WORKDIR}"/iscan-plugin-perfection-v550.cpio
+	#rm -rf "${WORKDIR}"/iscan*.rpm
 	insinto /usr/share/iscan
 	doins "${WORKDIR}"/usr/share/iscan/*
 
