@@ -41,8 +41,9 @@ src_install() {
             tar -xzvf "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
 	    cpio -iv < "${WORKDIR}"/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm/iscan-plugin-perfection-v550.cpio
 	fi
-	#rm "${WORKDIR}"/iscan-plugin-perfection-v550.cpio
-	#rm -rf "${WORKDIR}"/iscan*.rpm
+	rm "${WORKDIR}"/iscan-plugin-perfection-v550-"${MY_PV}".i386.rpm/iscan-plugin-perfection-v550.cpio
+	rm -rf "${WORKDIR}"/iscan*.rpm
+        rm "${WORKDIR}"/iscan-plugin-perfection-v550-*.tar.gz
 	insinto /usr/share/iscan
 	doins "${WORKDIR}"/usr/share/iscan/*
 
