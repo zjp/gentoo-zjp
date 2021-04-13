@@ -5,15 +5,15 @@ EAPI="7"
 
 inherit multilib
 
-ISCAN_VER="2.30.4"
+EPS_VER="2.30.4"
 MY_PV=$(ver_rs 3 '-')
 
 DESCRIPTION="Epson Perfection V550 scanner plugin for SANE 'epkowa' backend"
 HOMEPAGE="http://download.ebz.epson.net/dsc/search/01/search/?OSC=LX"
 SRC_URI="amd64? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-"${ISCAN_VER}".x64.rpm.tar.gz )
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-"${EPS_VER}".x86.rpm.tar.gz )
 x86? (
-https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x86/iscan-perfection-v550-bundle-"${ISCAN_VER}".x86.rpm.tar.gz )"
+https://download2.ebz.epson.net/iscan/plugin/perfection-v550/rpm/x64/iscan-perfection-v550-bundle-"${EPS_VER}".x64.rpm.tar.gz )"
 LICENSE="AVASYS"
 SLOT="0"
 KEYWORDS="-* ~amd64 ~x86"
